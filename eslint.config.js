@@ -8,7 +8,7 @@ import tsParser from "@typescript-eslint/parser";
 import cypress from "eslint-plugin-cypress";
 
 export default [
-  { ignores: ["dist"] },
+  { ignores: ["dist", "node_modules"] },
   {
     files: ["**/*.{js,jsx,ts,tsx}"],
     languageOptions: {
@@ -17,6 +17,7 @@ export default [
         ...globals.browser,
         ...globals.mocha,
         cy: "readonly",
+        NodeJS: true,
       },
       parser: tsParser,
       parserOptions: {
