@@ -17,11 +17,12 @@ export const Alert = ({
   onMouseLeave,
 }: AlertComponentProps): JSX.Element => (
   <motion.div
+    data-testid="alert"
     initial={{ y: -100 }}
     animate={{ y: 0 }}
     transition={{ duration: 1.3, ease: "easeInOut" }}
     className={`fixed left-1/2 transform -translate-x-1/2 p-2 flex flex-row items-center justify-center text-center rounded-lg text-gray-600 w-auto min-w-[230px] max-w-[90vw] h-[65px] animate-fadeIn ${
-      type === "success" ? "bg-success-alert" : "bg-error-alert"
+      type === "success" ? "bg-success-alert success" : "bg-error-alert error"
     } ${position === "top" ? "top-6" : "bottom-6"}`}
     onMouseLeave={onMouseLeave}
     onMouseEnter={onMouseEnter}

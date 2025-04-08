@@ -32,7 +32,7 @@ export const BinaryMaskDrawer = ({ setAlertProps }: Props): JSX.Element => {
   };
 
   const isCorrectVal = (): boolean => {
-    if (hasOtherDigits(inputVal)) {
+    if (hasOtherDigits(inputVal.replace(/\s+/g, ""))) {
       setAlertProps({
         text: "Not binary mask!",
         type: "error",
@@ -78,6 +78,7 @@ export const BinaryMaskDrawer = ({ setAlertProps }: Props): JSX.Element => {
         className="w-[85%] h-[75%] outline-black/10 outline rounded-md shadow-lg"
       />
       <input
+        data-testid="input"
         value={inputVal}
         onChange={({ currentTarget: { value } }) => setInputVal(value)}
         className="w-[75%] bg-white rounded-md shadow-lg my-4 py-4 px-2 h-[40px] focus:outline-violet-400"
@@ -85,6 +86,7 @@ export const BinaryMaskDrawer = ({ setAlertProps }: Props): JSX.Element => {
         type="text"
       />
       <button
+        data-testid="button"
         onClick={handleDraw}
         className={`${
           !inputVal.length

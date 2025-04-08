@@ -9,7 +9,8 @@ export default defineConfig({
   },
 
   e2e: {
-    baseUrl: "https://fit-form-gamma.vercel.app/start",
+    supportFile: false,
+    baseUrl: "https://rle-paint.vercel.app/",
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },

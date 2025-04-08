@@ -1,2 +1,1 @@
-export const hasOtherDigits = (str: string): boolean =>
-  str.split("").every((part) => part === "" || /[^01]/.test(part));
+export const hasOtherDigits = (str: string): boolean => /[2-9]/.test(str);
