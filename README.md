@@ -1,54 +1,34 @@
-# React + TypeScript + Vite
+<div align="center">
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Technological stack
 
-Currently, two official plugins are available:
+This project was written in React using Typescript, Vite, Tailwind v4 and Cypress
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<img src="https://cdn.freebiesupply.com/logos/large/2x/react-1-logo-png-transparent.png" alt="React" width="75" height="75" style="object-fit: cover;">
+<img src="https://static-00.iconduck.com/assets.00/typescript-icon-icon-1024x1024-vh3pfez8.png" alt="TypeScript" width="75" height="75" style="object-fit: cover;">
+<img src="https://cdn-icons-png.flaticon.com/512/5968/5968358.png" alt="SCSS" width="75" height="75" style="object-fit: cover;">
+<img src="https://gyazo.com/d779a2f7951457023e090625aa510cc3/max_size/1000" alt="Tailwind" width="75" height="75" style="object-fit: cover;">
+<img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Vitejs-logo.svg" alt="Vite" width="75" height="75" style="object-fit: cover">
+<img src="https://static-00.iconduck.com/assets.00/cypress-icon-2048x2048-swmlmjca.png" alt="Cypress" width="75" height="75" style="object-fit: cover;">
 
-## Expanding the ESLint configuration
+# Rle paint
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+RLE paint is a simple web app that helps you visualize binary masks from binary data. Just paste in your binary code, click a button, and instantly see the decoded mask rendered on a canvas. Great for learning how RLE works and exploring how binary image masks are structured and displayed.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+![Main](https://docs.google.com/uc?id=1QDwTJVqVLo87-iRO2uNBUzQgdh-5UEJK)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+<i>Main</i>
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+# pnpm scripts
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- `i` - to install all packages
+- `dev` - start dev server and open browser
+- `build` - build for production
+- `preview` - locally preview production build
+- `test` - launch test runner
+
+# Link to try a project
+
+https://rle-paint.vercel.app/
+
+</div>
